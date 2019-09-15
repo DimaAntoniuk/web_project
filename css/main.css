@@ -1,6 +1,6 @@
 body{
   margin: 0;
-  background-color: #111;
+  background-color: #000000;
 }
 ul {
   list-style-type: none;
@@ -15,25 +15,85 @@ ul {
 li {
   float: left;
 }
-li a {
+li img {
+  max-height: 42px;
+  align: center;
+}
+.navbar li a {
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  min-width: 120px;
 }
-li a:hover:not(.active) {
+.navbar li:hover, .dropdown:hover .dropdown-button {
   background-color: #111;
 }
-.active {
-  background-color: #789;
+.dropdown .dropdown-button {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  min-width: 120px;
 }
-img {
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #333;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #111;
+}
+.bigimg {
   margin:0;
   width:100%
 }
-h2 a {
+p {
   display: block;
-  color: black;
-  padding: 14px 16px;
+  color: #E0E0E0;
+  font-size: 22px;
+  margin: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.subtitle {
+  color: #808080;
+  text-align: left;
+  text-decoration: overline;
+  text-decoration-style: double;
+  text-transform: uppercase;
+}
+.biography-text{
+  color: #E0E0E0;
+}
+.best-album-name {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.best-album-name .album-name {
+  font-size: 40px;
+  float: left;
+}
+.best-album-name .album-name span {
+  color: #9933FF;
+}
+.best-album-name img {
+  float: right;
+  max-width: 40%;
+}
+footer a {
+  color: #FFFFFF;
+  font-size: 17px;
+}
+.resorces {
+  margin-bottom: 10px;
 }
