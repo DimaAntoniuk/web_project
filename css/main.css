@@ -4,7 +4,7 @@ body{
 }
 ul {
   list-style-type: none;
-  margin:0;
+  margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
@@ -58,6 +58,7 @@ li img {
   width:100%
 }
 p {
+  margin-top: 50px;
   display: block;
   color: #E0E0E0;
   font-size: 22px;
@@ -66,13 +67,15 @@ p {
   margin-right: 10%;
 }
 .subtitle {
+  font-size: 25px;
   color: #808080;
   text-align: left;
   text-decoration: overline;
   text-decoration-style: double;
   text-transform: uppercase;
+  margin-top: 60px;
 }
-.biography-text{
+.biography-text {
   color: #E0E0E0;
 }
 .best-album-name {
@@ -80,20 +83,26 @@ p {
   margin-right: 10%;
 }
 .best-album-name .album-name {
-  font-size: 40px;
+  font-size: 60px;
   float: left;
 }
 .best-album-name .album-name span {
   color: #9933FF;
 }
+.best-album-name .album-name {
+  margin: 220px;
+}
 .best-album-name img {
   float: right;
   max-width: 40%;
+  margin-bottom: 100px;
 }
-footer a {
+.resources a {
   color: #FFFFFF;
   font-size: 17px;
+  text-decoration: none;
 }
-.resorces {
-  margin-bottom: 10px;
+footer .resources {
+  border-width: 1px;
+  border-color: white;
 }
