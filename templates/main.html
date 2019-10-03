@@ -3,47 +3,53 @@
   <head>
     <meta charset="utf-8">
     <title>SCARLXRD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" text="text/css" href="../css/main.css">
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="navbar">
-          <ul>
-            <li>
-              <img class="logo" src="../images/small_logo.jpg" alt="[LOGO]">
+    <header class="stiky-top">
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a href="#" class="navbar-brand">
+          <img  class="logo" src="../images/small_logo.jpg" alt="[LOGO]">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+          <ul class="navbar-nav text-center">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Main</a>
             </li>
-            <li>
-              <a href="#">Main</a>
+            <li class="nav-item">
+              <a href="#" class="nav-link">News</a>
             </li>
-            <li>
-              <a href="#">News</a>
-            </li>
-            <li>
+            <li class="nav-item">
               <div class="dropdown">
-                <button class="dropdown-button">
-                  <span>Fxr fans</span>
-                </button>
-                <div class="dropdown-content">
-                  <a href="#">Fan clubs</a>
-                  <a href="tour_schedule.html">Txur schedule</a>
-                  <a href="#">Lyrics</a>
+                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">For fans</a>
+                <div class="dropdown-menu">
+                  <a href="#" class="dropdown-item">Fan club</a>
+                  <a href="tour_schedule.html" class="dropdown-item">Tour schedule</a>
+                  <a href="#" class="dropdown-item">Lyrics</a>
                 </div>
               </div>
             </li>
             <li>
-              <a href="#">Fans appeal</a>
+              <a class="nav-link" href="#">Fans appeal</a>
             </li>
             <li>
-              <a href="#">Cxncert venue</a>
+              <a class="nav-link" href="#">Cxncert venue</a>
             </li>
             <li>
-              <a class="admin" href="#">Admin</a>
+              <a  class="nav-link admin" href="#">Admin</a>
             </li>
           </ul>
         </div>
       </nav>
-      <img class="bigimg" src="../images/Scarlxgx.jpg" alt="[SCARLXRD]">
+      <img class="img-fluid mx-auto d-block" src="../images/Scarlxgx.jpg" alt="[SCARLXRD]">
     </header>
     <main>
       <br><br><br>
