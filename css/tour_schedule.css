@@ -1,108 +1,40 @@
 body{
   margin: 0;
-  background-color: #000000;
+  background-color: black;
 }
-ul {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  top: 0;
-  position: fixed;
-  width: 100%;
+.from-top {
+  animation-name: fromTop;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+.logo {
+  height: 60px;
+  width: auto;
+}
+.appear {
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
 }
 @keyframes appear {
   0%{opacity:0;transform: rotateX(0deg);}
   50%{opacity: 0.5;transform: rotateX(180deg);}
   100%{opacity:1;transform: rotateX(0deg);}
 }
-.logo {
-  left: 0;
-  position: absolute;
-  animation-name: appear;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-}
-.admin {
-  right: 0;
-  position: absolute;
-}
-li img {
-  max-height: 42px;
-  align: center;
-  animation-name: appear;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-}
 @keyframes fromTop{
 	0% { opacity: 0; transform: translateY(-50px); z-index: -1;}
   90% { z-index: -1;}
 	100% { opacity: 1; transform: translateY(0px); z-index: 1;}
 }
-.navbar li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  min-width: 120px;
-}
-.navbar li a {
-  animation-name: fromTop;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-}
-.navbar li:hover, .dropdown:hover .dropdown-button {
-  background-color: #111;
-}
-.dropdown .dropdown-button {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-  min-width: 120px;
-  animation-name: fromTop;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-}
-.dropdown-content {
-  display: none;
-  position: fixed;
-  background-color: #333;
-  animation-name: fromTop;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.dropdown-content a:hover {
-  background-color: #111;
-}
 .bigimg {
   margin:0;
   width:100%
 }
-.text_on_image {
-  font-size: 30px;
-  z-index: 10;
-  color:red;
-}
 @keyframes transformer {
   from{color:#FFFFFF;}
-  50% {font-size: 70px; color:red;}
+  50% {font-size: 9vw; color:red;}
   to{color:#FFFFFF;}
 }
 .title {
@@ -145,11 +77,14 @@ tr:hover td {
     background-color: #FF3333;
     font-family: sans-serif;
 }
-.resources {
-  text-align: center;
+.bg-footer {
+  display: block;
+  clear: both;
+  background-color: #2f2f2f;
 }
-.resources a {
-  color: #FFFFFF;
-  font-size: 20px;
+footer a {
   text-decoration: none;
+  color: #fff;
+  line-height: 3.3;
+  font-size: 2.5vw;
 }

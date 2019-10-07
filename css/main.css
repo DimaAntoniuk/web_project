@@ -11,15 +11,15 @@ body{
   height: 60px;
   width: auto;
 }
-.bigimg {
-  margin:0;
-  width:100%
-}
 .appear {
   animation-name: appear;
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
+}
+.bigimg {
+  margin:0;
+  width:100%
 }
 p {
   display: block;
@@ -85,6 +85,6 @@ footer a {
 }
 @keyframes fromTop{
 	0% { opacity: 0; transform: translateY(-50px); z-index: -1;}
-  50% { z-index: 0.5;}
+  90% { z-index: 0;}
 	100% { opacity: 1; transform: translateY(0px); z-index: 1;}
 }
