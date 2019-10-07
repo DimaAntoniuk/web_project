@@ -1,0 +1,25 @@
+.main-text {
+  margin-top: 10vw;
+  font-size: 5vw;
+  margin-bottom: 10vw;
+  color: white;
+}
+.image {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+.address {
+  background-color: white;
+  width: 60%;
+  margin: 70px auto;
+  border: 1px solid red;
+  color: black;
+}
+.order-ticket {
+  display: block;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  border: none;
+}

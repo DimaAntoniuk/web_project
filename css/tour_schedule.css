@@ -1,33 +1,3 @@
-body{
-  margin: 0;
-  background-color: black;
-}
-.from-top {
-  animation-name: fromTop;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-}
-.logo {
-  height: 60px;
-  width: auto;
-}
-.appear {
-  animation-name: appear;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-}
-@keyframes appear {
-  0%{opacity:0;transform: rotateX(0deg);}
-  50%{opacity: 0.5;transform: rotateX(180deg);}
-  100%{opacity:1;transform: rotateX(0deg);}
-}
-@keyframes fromTop{
-	0% { opacity: 0; transform: translateY(-50px); z-index: -1;}
-  90% { z-index: -1;}
-	100% { opacity: 1; transform: translateY(0px); z-index: 1;}
-}
 .bigimg {
   margin:0;
   width:100%
@@ -48,20 +18,13 @@ body{
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
-table {
+.table {
   margin-left: 10%;
   margin-top: 125px;
   margin-bottom: 125px;
   width: 80%;
   border-spacing: 0;
   border-collapse: collapse;
-}
-th {
-  background-color: #1F1F1F;
-  font-family: sans-serif;
-}
-td {
-  background-color: #505050;
 }
 th, td {
   border-width: 1px;
@@ -75,16 +38,4 @@ th, td {
 }
 tr:hover td {
     background-color: #FF3333;
-    font-family: sans-serif;
-}
-.bg-footer {
-  display: block;
-  clear: both;
-  background-color: #2f2f2f;
-}
-footer a {
-  text-decoration: none;
-  color: #fff;
-  line-height: 3.3;
-  font-size: 2.5vw;
 }
