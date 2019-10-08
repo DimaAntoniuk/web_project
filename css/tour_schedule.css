@@ -11,8 +11,8 @@
   text-align: center;
   font-size: 40px;
   color: white;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   animation-name: transformer;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -20,8 +20,8 @@
 }
 .table {
   margin-left: 10%;
-  margin-top: 125px;
-  margin-bottom: 125px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   width: 80%;
   border-spacing: 0;
   border-collapse: collapse;
@@ -33,7 +33,7 @@ th, td {
   color: white;
   height: 70px;
   width: 33.33%;
-  font-size: 30px;
+  font-size: 5vw;
   text-align: center;
 }
 tr:hover td {
