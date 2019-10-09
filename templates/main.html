@@ -3,52 +3,64 @@
   <head>
     <meta charset="utf-8">
     <title>SCARLXRD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" text="text/css" href="../css/main.css">
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="navbar">
-          <ul>
-            <li>
-              <img class="logo" src="../images/small_logo.jpg" alt="[LOGO]">
+    <header class="stiky-top">
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a href="#" class="navbar-brand">
+          <img  class="appear logo img-rounded" src="../images/small_logo.jpg" alt="[LOGO]">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+          <ul class="navbar-nav from-top">
+            <li class="nav-item active">
+              <a href="#" class="nav-link">Main</a>
             </li>
-            <li>
-              <a href="#">Main</a>
+            <li class="nav-item">
+              <a href="#" class="nav-link">News</a>
             </li>
-            <li>
-              <a href="#">News</a>
-            </li>
-            <li>
+            <li class="nav-item">
               <div class="dropdown">
-                <button class="dropdown-button">
-                  <span>Fxr fans</span>
-                </button>
-                <div class="dropdown-content">
-                  <a href="#">Fan clubs</a>
-                  <a href="tour_schedule.html">Txur schedule</a>
-                  <a href="#">Lyrics</a>
+                <a href="#" class="dropdown-toggle nav-link" id="navbardrop" data-toggle="dropdown">
+                  For fans
+                </a>
+                <div class="dropdown-menu">
+                  <a href="#" class="dropdown-item">
+                    Fan club
+                  </a>
+                  <a href="tour_schedule.html" class="dropdown-item">
+                    Tour schedule
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Lyrics
+                  </a>
                 </div>
               </div>
             </li>
-            <li>
-              <a href="#">Fans appeal</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Fans appeal</a>
             </li>
-            <li>
-              <a href="#">Cxncert venue</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cxncert venue</a>
             </li>
-            <li>
-              <a class="admin" href="#">Admin</a>
+            <li class="nav-item">
+              <a  class="nav-link admin" href="#">Admin</a>
             </li>
           </ul>
         </div>
       </nav>
       <img class="bigimg" src="../images/Scarlxgx.jpg" alt="[SCARLXRD]">
     </header>
-    <main>
-      <br><br><br>
+    <main class="bg-main">
       <p class="subtitle">Bixgraphy</p>
-      <br><br>
       <p class="biography-text">
         Birthday: June 19, 1994<br>
 
@@ -70,17 +82,19 @@
       <p class="subtitle">
         best album
       </p>
-      <div class="best-album-name">
-        <div class="album-name">
-          <span>INFINITY</span>
-        </div>
-        <img src="../images/infinity.jpg" alt="[INFINITY]">
-      </div>
     </main>
-    <footer>
-      <div class="resources">
-        <a href="https://www.thefamouspeople.com/profiles/scarlxrd-42864.php">resources</a>
+    <div class="album bg-album">
+      <div class="album-name">
+        <b>INFINITY</b>
       </div>
+      <div class="album-logo">
+        <img class="album-img" src="../images/infinity.jpg" alt="[INFINITY]">
+      </div>
+    </div>
+    <footer class="stiky-bottom bg-footer text-center">
+      <a href="https://www.thefamouspeople.com/profiles/scarlxrd-42864.php">
+        resources
+      </a>
     </footer>
   </body>
 </html>
