@@ -1,0 +1,18 @@
+h1 {
+  margin: 50px auto;
+  color: white;
+}
+
+.news {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.news-card {
+  margin: 50px;
+  width: 350px;
+}
