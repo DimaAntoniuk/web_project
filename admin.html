@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SCARLXRD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" text="text/css" href="css/general.css">
+    <link rel="stylesheet" text="text/css" href="css/admin.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a href="#" class="navbar-brand">
+          <img  class="appear logo img-rounded" src="images/small_logo.jpg" alt="[LOGO]">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+          <ul class="navbar-nav from-top">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Main</a>
+            </li>
+            <li class="nav-item">
+              <a href="news.html" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <a href="#" class="dropdown-toggle nav-link" id="navbardrop" data-toggle="dropdown">
+                  For fans
+                </a>
+                <div class="dropdown-menu">
+                  <a href="#" class="dropdown-item">
+                    Fan club
+                  </a>
+                  <a href="tour_schedule.html" class="dropdown-item">
+                    Tour schedule
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Lyrics
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="fans_appeal.html">Fans appeal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="concert_venue.html">Cxncert venue</a>
+            </li>
+            <li class="nav-item active">
+              <a  class="nav-link admin" href="admin.html">Admin</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="top-part d-flex">
+        <div class="d-flex left-side">
+          <button type="button" class="add-button rounded">
+            ADD photo
+          </button>
+          <img class="cross" src="images/red-cross.png" alt="RED CROSS">
+        </div>
+        <img class="admin-photo" src="images/admin_photo.jpg" alt="Odmen">
+      </div>
+      <div class="top-part d-flex">
+        <button type="button" class="send-button rounded">Send</button>
+        <div class="d-flex input-field">
+          <textarea class="title" rows="1" cols="50" placeholder="News title"></textarea>
+          <textarea class="body" rows="9" cols="90" placeholder="News body"></textarea>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-footer text-center">
+      <a href="#">
+        DimaAntoniuk
+      </a>
+    </footer>
+  </body>
+</html>
