@@ -2,20 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>SCARLXRD</title>
+    <title>Txurs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" text="text/css" href="../css/general.css">
-    <link rel="stylesheet" text="text/css" href="../css/admin.css">
+    <link rel="stylesheet" text="text/css" href="css/general.css">
+    <link rel="stylesheet" text="text/css" href="css/tour_schedule.css">
   </head>
   <body>
-    <header class="stiky-top">
+    <header>
       <nav class="navbar navbar-expand-md bg-dark navbar-dark">
         <a href="#" class="navbar-brand">
-          <img  class="appear logo img-rounded" src="../images/small_logo.jpg" alt="[LOGO]">
+          <img  class="appear logo img-rounded" src="images/small_logo.jpg" alt="[LOGO]">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
@@ -23,14 +23,14 @@
         <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
           <ul class="navbar-nav from-top">
             <li class="nav-item">
-              <a href="main.html" class="nav-link">Main</a>
+              <a href="index.html" class="nav-link">Main</a>
             </li>
             <li class="nav-item">
               <a href="news.html" class="nav-link">News</a>
             </li>
             <li class="nav-item">
               <div class="dropdown">
-                <a href="#" class="dropdown-toggle nav-link" id="navbardrop" data-toggle="dropdown">
+                <a href="#" class="dropdown-toggle nav-link active" id="navbardrop" data-toggle="dropdown">
                   For fans
                 </a>
                 <div class="dropdown-menu">
@@ -52,32 +52,51 @@
             <li class="nav-item">
               <a class="nav-link" href="concert_venue.html">Cxncert venue</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a  class="nav-link admin" href="admin.html">Admin</a>
             </li>
           </ul>
         </div>
       </nav>
+      <img class="bigimg" src="images/all_stars.jpg" alt="[SCARLXRD]">
     </header>
     <main>
-      <div class="top-part d-flex">
-        <div class="d-flex left-side">
-          <button type="button" class="add-button rounded">
-            ADD photo
-          </button>
-          <img class="cross" src="../images/red-cross.png" alt="RED CROSS">
-        </div>
-        <img class="admin-photo" src="../images/admin_photo.jpg" alt="Odmen">
-      </div>
-      <div class="top-part d-flex">
-        <button type="button" class="send-button rounded">Send</button>
-        <div class="d-flex input-field">
-          <textarea class="title" rows="1" cols="50" placeholder="News title"></textarea>
-          <textarea class="body" rows="9" cols="90" placeholder="News body"></textarea>
-        </div>
+      <p class="title">TOUR SCHEDULE</p>
+      <div class="table-responsive">
+        <table class="table table-hover table-dark">
+          <thead class="thead-light">
+            <tr>
+              <th>Date</th>
+              <th>City</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>20.09.19</td>
+              <td>Peterburg</td>
+              <td>7pm</td>
+            </tr>
+            <tr>
+              <td>21.09.19</td>
+              <td>Orlando</td>
+              <td>6pm</td>
+            </tr>
+            <tr>
+              <td>23.09.19</td>
+              <td>Jacksonville</td>
+              <td>8pm</td>
+            </tr>
+            <tr>
+              <td>21.10.19</td>
+              <td>Kyiv</td>
+              <td>8pm</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </main>
-    <footer class="stiky-bottom bg-footer text-center">
+    <footer class="bg-footer text-center">
       <a href="#">
         DimaAntoniuk
       </a>

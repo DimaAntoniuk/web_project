@@ -1,0 +1,14 @@
+CACHE MANIFEST
+
+CACHE:
+news.html
+css/main.css
+css/news.css
+tour_schedule.html
+admin.html
+
+NETWORK:
+*
+
+FALLBACK:
+/ error.html
