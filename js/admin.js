@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var title_text = document.getElementById('title').value;
     var body_text = document.getElementById('body').value;
     if(title_text == '' || body_text == '') {
+      alert('Fill in text!');
       if(title_text == '') {
         document.getElementById('title').style.backgroundColor = "yellow";
       } else {
