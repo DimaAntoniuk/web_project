@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function(){
       right_div.setAttribute('class', 'both right');
       var today = new Date();
       var time = today.getHours() + ":" + today.getMinutes();
-      var date = (today.getDate())+'.'+(today.getMonth()+1)+'.'+today.getFullYear();
+      var date = (today.getDate()) + '.' + (today.getMonth()+1) + '.' + today.getFullYear();
       left_div.innerHTML = 'Dima Antinuk <br>'+time+'<br>'+date;
       right_div.innerHTML = appeal_text;
       big_div.appendChild(left_div);
