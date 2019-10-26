@@ -1,5 +1,6 @@
 var allAppeals = [];
 document.addEventListener('DOMContentLoaded', function(){
+
   window.addEventListener('online', function() {
     if(localStorage.getItem('appeals')) {
       allAppeals = JSON.parse(localStorage.getItem('appeals'));
@@ -9,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function(){
       localStorage.setItem('appeals', JSON.stringify([]));
     }
   });
+
   document.getElementById('send').addEventListener('click', function() {
     var name = document.getElementById('name').value.trim();
     var appeal_text = document.getElementById('text').value.trim();

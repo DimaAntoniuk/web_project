@@ -1,3 +1,7 @@
+var news = [];
+if(localStorage.getItem('news')) {
+  news = JSON.parse(localStorage.getItem('news'));
+}
 document.addEventListener('DOMContentLoaded', function(){
   document.getElementById('send').addEventListener('click', function() {
     var title_text = document.getElementById('title').value;
@@ -15,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById('body').style.backgroundColor = "white";
       }
     } else {
+      news.push({title:title_text, body:body_text});
+      localStorage.setItem('news', JSON.stringify(news));
       document.getElementById('title').style.backgroundColor = "white";
       document.getElementById('body').style.backgroundColor = "white";
       document.getElementById('title').value = '';
