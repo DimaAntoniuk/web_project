@@ -8,6 +8,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="jquery-3.4.1.min.js">
+
+    </script>
+    <script src="js/admin.js">
+
+    </script>
     <link rel="stylesheet" text="text/css" href="css/general.css">
     <link rel="stylesheet" text="text/css" href="css/admin.css">
   </head>
@@ -70,10 +76,10 @@
         <img class="admin-photo" src="images/admin_photo.jpg" alt="Odmen">
       </div>
       <div class="top-part d-flex">
-        <button type="button" class="send-button rounded">Send</button>
+        <button id="send" type="button" class="send-button rounded">Send</button>
         <div class="d-flex input-field">
-          <textarea class="title" rows="1" cols="50" placeholder="News title"></textarea>
-          <textarea class="body" rows="9" cols="90" placeholder="News body"></textarea>
+          <textarea id="title" class="title" rows="1" cols="50" placeholder="News title"></textarea>
+          <textarea id="body" class="body" rows="9" cols="90" placeholder="News body"></textarea>
         </div>
       </div>
     </main>
