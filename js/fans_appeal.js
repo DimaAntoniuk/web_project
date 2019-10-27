@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function(){
       alert("Fill forms, please!");
     } else {
       if(checkConnection()) {
+        alert('SERVER');
         postAppeal(name, appeal_text);
         localStorage.setItem('appeals', JSON.stringify([]));
       } else {

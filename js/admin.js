@@ -20,7 +20,12 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     } else {
       news.push({title:title_text, body:body_text});
-      localStorage.setItem('news', JSON.stringify(news));
+      if(window.navigator.onLine) {
+        alert('SERVER');
+        localStorage.setItem('news', JSON.stringify(news));
+      } else {
+        localStorage.setItem('news', JSON.stringify(news));
+      }
       document.getElementById('title').style.backgroundColor = "white";
       document.getElementById('body').style.backgroundColor = "white";
       document.getElementById('title').value = '';
