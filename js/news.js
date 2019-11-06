@@ -1,23 +1,30 @@
+var storage;
+
 document.addEventListener("DOMContentLoaded", function() {
+  storage = new Provider();
   if(!window.navigator.onLine) {
     alert("Sorry lastest news aren't avalivle");
     window.addEventListener('online', function() {
-      if(localStorage.getItem('news')) {
-        var allNews = JSON.parse(localStorage.getItem('news'));
-        for(i=0;i<allNews.length;i++) {
-          postNews(allNews[i].title, allNews[i].body);
+      storage.provider.get('news', function(data) {
+        if (data) {
+          for (i = 0; i < data.length; i++) {
+            postNews(data[i].title, data[i].body);
+          }
+          storage.provider.delete('news');
+          console.log('SERVER');
         }
-        localStorage.setItem('news', JSON.stringify([]));
-      }
+      });
     });
   } else {
-    if(localStorage.getItem('news')) {
-      var allNews = JSON.parse(localStorage.getItem('news'));
-      for(i=0;i<allNews.length;i++) {
-        postNews(allNews[i].title, allNews[i].body);
+    storage.provider.get('news', function(data) {
+      if (data) {
+        for (i = 0; i < data.length; i++) {
+          postNews(data[i].title, data[i].body);
+        }
+        storage.provider.delete('news');
+        console.log('SERVER');
       }
-      localStorage.setItem('news', JSON.stringify([]));
-    }
+    });
   }
 });
 function postNews(title_text, body_text) {

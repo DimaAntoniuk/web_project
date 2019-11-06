@@ -1,14 +1,18 @@
-var allAppeals = [];
-document.addEventListener('DOMContentLoaded', function(){
+var storage;
 
+document.addEventListener('DOMContentLoaded', function(){
+  storage = new Provider();
   window.addEventListener('online', function() {
-    if(localStorage.getItem('appeals')) {
-      allAppeals = JSON.parse(localStorage.getItem('appeals'));
-      for(i=0;i<allAppeals.length;i++) {
-        postAppeal(allAppeals[i].name, allAppeals[i].appeal_text);
+    storage.provider.get('appeals', function(data) {
+      if (data) {
+        for (i = 0; i < data.length; i++) {
+          postAppeal(data[i].name, data[i].text);
+        }
+        storage.provider.delete('appeals');
+        appeals = [];
+        console.log('SERVER');
       }
-      localStorage.setItem('appeals', JSON.stringify([]));
-    }
+    });
   });
 
   document.getElementById('send').addEventListener('click', function() {
@@ -20,10 +24,19 @@ document.addEventListener('DOMContentLoaded', function(){
       if(checkConnection()) {
         alert('SERVER');
         postAppeal(name, appeal_text);
-        localStorage.setItem('appeals', JSON.stringify([]));
       } else {
-        allAppeals.push({name:name, appeal_text:appeal_text});
-        localStorage.setItem('appeals', JSON.stringify(allAppeals));
+        storage.provider.get('appeals', function(data) {
+          var appeals
+          if (data) {
+            appeals = data;
+          }
+          else {
+            appeals = [];
+          }
+          appeals.push({name:name, text: appeal_text});
+          storage.provider.add('appeals', appeals);
+          console.log("PROVIDER");
+        });
       }
       document.getElementById('name').value = '';
       document.getElementById('text').value = '';

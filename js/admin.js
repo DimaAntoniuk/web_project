@@ -1,7 +1,9 @@
-var news = [];
-if(localStorage.getItem('news')) {
-  news = JSON.parse(localStorage.getItem('news'));
-}
+var storage;
+
+window.addEventListener('DOMContentLoaded', function() {
+  storage = new Provider();
+});
+
 document.addEventListener('DOMContentLoaded', function(){
   document.getElementById('send').addEventListener('click', function() {
     var title_text = document.getElementById('title').value;
@@ -19,12 +21,33 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById('body').style.backgroundColor = "white";
       }
     } else {
-      news.push({title:title_text, body:body_text});
       if(window.navigator.onLine) {
         alert('SERVER');
-        localStorage.setItem('news', JSON.stringify(news));
+        storage.provider.get('news', function(data) {
+          var news;
+          if (data) {
+            news = data;
+          }
+          else {
+            news = [];
+          }
+          news.push({title : title_text, body : body_text});
+          storage.provider.add('news', news);
+          console.log("PROVIDER");
+        });
       } else {
-        localStorage.setItem('news', JSON.stringify(news));
+        storage.provider.get('news', function(data) {
+          var news;
+          if (data) {
+            news = data;
+          }
+          else {
+            news = [];
+          }
+          news.push({title : title_text, body : body_text});
+          storage.provider.add('news', news);
+          console.log("PROVIDER");
+        });
       }
       document.getElementById('title').style.backgroundColor = "white";
       document.getElementById('body').style.backgroundColor = "white";
