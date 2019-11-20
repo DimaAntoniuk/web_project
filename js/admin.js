@@ -21,20 +21,25 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById('body').style.backgroundColor = "white";
       }
     } else {
+      var obj = {title_text : title_text, body_text : body_text};
       if(window.navigator.onLine) {
         alert('SERVER');
-        storage.provider.get('news', function(data) {
-          var news;
-          if (data) {
-            news = data;
+        var req = new XMLHttpRequest();
+        req.open("POST", "/news", true);
+        req.setRequestHeader('Content-Type', 'application/json');
+        req.send(JSON.stringify(obj));
+
+        req.onreadystatechange = function() {
+          if (req.readyState === XMLHttpRequest.DONE) {
+            if (req.status != 200) {
+              alert("Error");
+            }
+            else {
+              alert("Success!");
+            }
           }
-          else {
-            news = [];
-          }
-          news.push({title : title_text, body : body_text});
-          storage.provider.add('news', news);
-          console.log("PROVIDER");
-        });
+        }
+
       } else {
         storage.provider.get('news', function(data) {
           var news;
@@ -44,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function(){
           else {
             news = [];
           }
-          news.push({title : title_text, body : body_text});
+          news.push(obj);
           storage.provider.add('news', news);
           console.log("PROVIDER");
         });

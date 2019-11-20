@@ -4,30 +4,53 @@ document.addEventListener("DOMContentLoaded", function() {
   storage = new Provider();
   if(!window.navigator.onLine) {
     alert("Sorry lastest news aren't avalivle");
-    window.addEventListener('online', function() {
-      storage.provider.get('news', function(data) {
-        if (data) {
-          for (i = 0; i < data.length; i++) {
-            postNews(data[i].title, data[i].body);
-          }
-          storage.provider.delete('news');
-          console.log('SERVER');
-        }
-      });
-    });
   } else {
+    var req = new XMLHttpRequest();
+    req.open("GET", "/news", true);
+    req.send();
+
+    req.onreadystatechange = function() {
+      if (req.readyState === XMLHttpRequest.DONE) {
+        if (req.status != 200) {
+          console.log("Error");
+        }
+        else {
+          var data = JSON.parse(req.responseText);
+          for (i = 0; i < data.length; i++) {
+            postNews(data[i]);
+          }
+        }
+      }
+    }
+  }
+  window.addEventListener('online', function() {
     storage.provider.get('news', function(data) {
       if (data) {
         for (i = 0; i < data.length; i++) {
-          postNews(data[i].title, data[i].body);
+          postNews(data[i]);
         }
         storage.provider.delete('news');
-        console.log('SERVER');
+
+        var req = new XMLHttpRequest();
+        req.open("POST", "/news", true);
+        req.setRequestHeader('Content-Type', 'application/json');
+        req.send(JSON.stringify(data));
+
+        req.onreadystatechange = function() {
+          if (req.readyState === XMLHttpRequest.DONE) {
+            if (req.status != 200) {
+              console.log("Error");
+            }
+            else {
+              console.log('Server');
+            }
+          }
+        }
       }
     });
-  }
+  });
 });
-function postNews(title_text, body_text) {
+function postNews(obj) {
   var card = document.createElement('div');
   var img = document.createElement('img');
   var body = document.createElement('div');
@@ -40,11 +63,14 @@ function postNews(title_text, body_text) {
   body.setAttribute('class', 'card-body');
   title.setAttribute('class', 'card-title');
   text.setAttribute('class', 'card-text');
-  title.innerHTML = title_text;
-  text.innerHTML = body_text;
+  title.innerHTML = obj.title_text;
+  text.innerHTML = obj.body_text;
   body.appendChild(title);
   body.appendChild(text);
   card.appendChild(img);
   card.appendChild(body);
   document.getElementById('news').appendChild(card);
+}
+function isOnline() {
+  return window.navigator.onLine;  
 }
