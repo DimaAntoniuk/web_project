@@ -19,7 +19,6 @@ server.get('/fans_appeal', (req, res) => {
     var result = dbo.collection("fans_appeal").find().toArray().then((data) => {
       res.send(data)
     })
-    dbo.collection("fans_appeal").deleteMany({})
     db.close()
   })
 })

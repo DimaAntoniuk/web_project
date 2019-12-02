@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function(){
             }
           }
         }
-
       } else {
         storage.provider.get('news', function(data) {
           var news;
