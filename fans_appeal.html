@@ -13,6 +13,9 @@
     <script src="jquery-3.4.1.min.js">
 
     </script>
+    <script src="js/db.js">
+
+    </script>
     <script src="js/fans_appeal.js">
 
     </script>
@@ -97,8 +100,13 @@
       </ul>
       <hr>
       <div class="sender d-flex">
-        <button id="send" class="send-button rounded" type="button">Send</button>
-        <textarea id="text" class="text-block" rows="9" cols="90" placeholder="Write an appeal..."></textarea>
+        <div class="left_sender">
+          <button id="send" class="send-button rounded" type="button">Send</button>
+        </div>
+        <div class="d-flex right_sender">
+          <textarea id="name" class="name-block" rows="1" cols="30" placeholder="Write an name..."></textarea>
+          <textarea id="text" class="text-block" rows="9" cols="90" placeholder="Write an appeal..."></textarea>
+        </div>
       </div>
     </main>
     <footer class="bg-footer text-center">
